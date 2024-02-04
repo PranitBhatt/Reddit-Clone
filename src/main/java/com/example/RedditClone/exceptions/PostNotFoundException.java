@@ -1,0 +1,6 @@
+package com.example.RedditClone.exceptions;
+
+public class PostNotFoundException extends Exception{
+    public PostNotFoundException(String message) {
+    }
+}
