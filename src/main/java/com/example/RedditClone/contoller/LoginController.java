@@ -1,6 +1,7 @@
 package com.example.RedditClone.contoller;
 
 
+import com.example.RedditClone.dtos.AuthResponse;
 import com.example.RedditClone.dtos.LoginRequest;
 import com.example.RedditClone.exceptions.PasswordIsIncorrect;
 import com.example.RedditClone.exceptions.UserNameNotFoundException;
@@ -22,10 +23,8 @@ public class LoginController {
     private UserService userService;
 
     @PostMapping("/")
-    public ResponseEntity<User> login(@RequestBody LoginRequest loginRequest , HttpSession session) throws UserNameNotFoundException, PasswordIsIncorrect {
-        User ans = userService.login(loginRequest);
-        session.setAttribute("User",ans);
-        return new ResponseEntity<>(ans,OK);
+    public AuthResponse login(@RequestBody LoginRequest loginRequest) throws UserNameNotFoundException, PasswordIsIncorrect {
+        return userService.login(loginRequest);
     }
 
     @GetMapping("/currentUser")

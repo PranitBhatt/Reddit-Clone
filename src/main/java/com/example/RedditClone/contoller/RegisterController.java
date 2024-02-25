@@ -21,7 +21,7 @@ public class RegisterController {
         this.userService = userService;
     }
 
-    @PostMapping("/")
+    @PostMapping("")
     public ResponseEntity<String> registerUser(@RequestBody RegisterRequestDto requestDto) throws UserAlreadyExists {
         User registerUser  = userService.registerUser(requestDto);
         return new ResponseEntity<>("User Registration Successful",OK);

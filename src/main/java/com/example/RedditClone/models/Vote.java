@@ -13,7 +13,7 @@ import static jakarta.persistence.GenerationType.IDENTITY;
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
-@Builder
+//@Builder
 public class Vote {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

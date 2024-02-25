@@ -13,6 +13,7 @@ import com.example.RedditClone.repositories.PostRepository;
 import com.example.RedditClone.repositories.UserRepository;
 import lombok.AllArgsConstructor;
 import lombok.NoArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
